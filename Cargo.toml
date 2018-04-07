@@ -2,7 +2,7 @@
 name = "guessing_game_squared"
 version = "1.0.0"
 authors = ["GitSquared <GitSquared@users.noreply.github.com>"]
-license = "MIT"
+license = "WTFPL"
 
 [dependencies]
 rand = "0.4"
