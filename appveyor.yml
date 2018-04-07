@@ -42,7 +42,7 @@ test_script:
 build_script:
 - cargo build --release
 after_build:
-  - ps: Push-AppveyorArtifact target\release\guessing_game_squared.exe -FileName guessing_game_squared-%target%.exe
+  - ps: Push-AppveyorArtifact target\release\guessing_game_squared.exe -FileName guessing_game_squared-${env:target}.exe
 deploy:
 - provider: GitHub
   tag: $(appveyor_repo_tag_name)
