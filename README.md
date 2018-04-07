@@ -1,5 +1,6 @@
 # Squared's guessing_game
-[![Build Status](https://travis-ci.org/GitSquared/guessing_game.svg?branch=master)](https://travis-ci.org/GitSquared/guessing_game)
+[![Build Status](https://travis-ci.org/GitSquared/guessing_game.svg?branch=master)](https://travis-ci.org/GitSquared/guessing_game) [![Build status](https://ci.appveyor.com/api/projects/status/1n4r8uyqar9nv6mn/branch/master?svg=true)](https://ci.appveyor.com/project/GitSquared/guessing-game/branch/master)
+
 
 \> be me  
 \> 3 am in the morning  
