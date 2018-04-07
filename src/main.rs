@@ -36,14 +36,14 @@ fn main() {
         let guess: u32 = match guess.trim().parse() {
             Ok(num) => num,
             Err(_) => { // _ means "any kind of value" (like *)
-                print!("{}", "❌  Please enter a valid number: ".red().bold());
+                print!("{}", "⨯  Please enter a valid number: ".red().bold());
                 continue; // next round of loop
             }
         };
 
         match guess.cmp(&secret_number) {
-            Ordering::Less => print!("{}  {} {} ", ">".red().bold(), TOO_LOW.yellow().bold(), PROMPT.bold()),
-            Ordering::Greater => print!("{}  {} {} ", ">".red().bold(), TOO_HIGH.cyan().bold(), PROMPT.bold()),
+            Ordering::Less => print!("{}  {} {} ", "▲".yellow().bold(), TOO_LOW.yellow().bold(), PROMPT.bold()),
+            Ordering::Greater => print!("{}  {} {} ", "▼".cyan().bold(), TOO_HIGH.cyan().bold(), PROMPT.bold()),
             Ordering::Equal => {
                 println!("{}  {}", "✓".green().bold(), WIN.green().bold());
                 break; // Break loop
