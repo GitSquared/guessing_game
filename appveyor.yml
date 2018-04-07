@@ -37,14 +37,12 @@ install:
   - set PATH=%PATH%;%USERPROFILE%\.cargo\bin
   - rustc -vV
   - cargo -vV
+test_script:
+  - cargo test
 build_script:
 - cargo build --release
-test_script:
-- cargo test
-artifacts:
-  - path: target\release\guessing_game_squared.exe
-    name: guessing_game_squared-%(target).exe
-    type: file
+after_build:
+  - ps: Push-AppveyorArtifact target\release\guessing_game_squared -FileName guessing_game_squared-%target%.exe
 deploy:
 - provider: GitHub
   tag: $(appveyor_repo_tag_name)
