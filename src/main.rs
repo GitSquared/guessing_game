@@ -11,7 +11,7 @@ static FIRST_PROMPT: &str = "Please input your guess:";
 static PROMPT: &str = "New guess?";
 static TOO_LOW: &str = "Too small!";
 static TOO_HIGH: &str = "Too big!";
-static WIN: &str = "Congratulations! You win!";
+static WIN: &str = "Congratulations! You won!";
 
 fn main() {
     println!("{}", GREETING.yellow().bold().italic());
