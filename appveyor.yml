@@ -1,0 +1,61 @@
+version: '{build}'
+pull_requests:
+  do_not_increment_build_number: true
+os: Visual Studio 2015
+environment:
+  matrix:
+    - channel: stable
+      target: x86_64-pc-windows-msvc
+    - channel: stable
+      target: i686-pc-windows-msvc
+    - channel: beta
+      target: x86_64-pc-windows-msvc
+    - channel: beta
+      target: i686-pc-windows-msvc
+    - channel: nightly
+      target: x86_64-pc-windows-msvc
+    - channel: nightly
+      target: i686-pc-windows-msvc
+    - channel: stable
+      target: x86_64-pc-windows-gnu
+    - channel: stable
+      target: i686-pc-windows-gnu
+    - channel: beta
+      target: x86_64-pc-windows-gnu
+    - channel: beta
+      target: i686-pc-windows-gnu
+    - channel: nightly
+      target: x86_64-pc-windows-gnu
+    - channel: nightly
+      target: i686-pc-windows-gnu
+matrix:
+  allow_failures:
+    - channel: nightly
+install:
+  - appveyor DownloadFile https://win.rustup.rs/ -FileName rustup-init.exe
+  - rustup-init -yv --default-toolchain %channel% --default-host %target%
+  - set PATH=%PATH%;%USERPROFILE%\.cargo\bin
+  - rustc -vV
+  - cargo -vV
+build_script:
+- cargo build --release
+test_script:
+- cargo test
+artifacts:
+  - path: target\release\guessing_game_squared.exe
+    name: guessing_game_squared-%(target).exe
+    type: file
+deploy:
+- provider: GitHub
+  tag: $(appveyor_repo_tag_name)
+  release: guessing_game $(appveyor_repo_tag_name)
+  description: 'Placeholder description'
+  auth_token:
+    secure: nhCD5meiNtzNXhZPxwfUQoLtiWBayOoyjA9iWwDk0wzKRn+oxnlYNfH4uoc9Zidv
+  artifact: guessing_game_squared-$(target).exe
+  draft: true
+  force_update: true
+  on:
+    branch: master
+    appveyor_repo_tag: true
+    channel: stable
