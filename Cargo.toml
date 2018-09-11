@@ -9,6 +9,15 @@ repository = "https://github.com/GitSquared/guessing_game"
 readme = "README.md"
 publish = false
 
+[[bin]]
+name = "guessing_game"
+path = "src/guess.rs"
+
+[[bin]]
+name = "autoguess"
+path = "src/auto.rs"
+
 [dependencies]
-rand = "0.4"
+rand = "0.5"
 colored = "1.6"
+meval = "0.1"

@@ -18,8 +18,11 @@ fn main() {
 
     let secret_number = rand::thread_rng().gen_range(1, 101); // .gen_range is from Rng.
     let mut is_first_run: bool = true;
+    let mut attempts: u64 = 0;
 
     loop {
+        attempts = attempts+1;
+
         let mut guess = String::new();
 
         if is_first_run == true {
@@ -45,7 +48,7 @@ fn main() {
             Ordering::Less => print!("{}  {} {} ", "▲".yellow().bold(), TOO_LOW.yellow().bold(), PROMPT.bold()),
             Ordering::Greater => print!("{}  {} {} ", "▼".cyan().bold(), TOO_HIGH.cyan().bold(), PROMPT.bold()),
             Ordering::Equal => {
-                println!("{}  {}", "✓".green().bold(), WIN.green().bold());
+                println!("{}  {} ({} attempts)", "✓".green().bold(), WIN.green().bold(), attempts.to_string().yellow().bold());
                 break; // Break loop
             }
         }

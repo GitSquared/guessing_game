@@ -17,7 +17,9 @@ deploy:
   provider: releases
   api_key:
     secure: aACx8kWxVFR6oW7IdJQzF3KVv+qwLJyMO3aZZ+Wqzuy0LBHJsN/UmKhp9aaZW0lZSow2KpE+x693k2xCIG+LZCuBrizIZ5NqprBzEJVrjlTjasB5q39b9kq++Ki2dXo2XX5iBjOKNwHnVx8qnIH6sYI8YVcuTFFNG8BvBRJY58A3QNWjkCL4o483+OLeeLbtuKY+VXDnI2u55k8grV2XZhfC9+acgqsojTkLTK/2fUm2JOLtx7SmqUwc00d5eTT+7YSoSakV4LhIJJQ3zJHdEQYkFmOjtanqK/U1XY3hRnEjPYtBD6upW96nIDj2vXc1h6jzZlNlCsYzzYSFNMkHhKILWmzTXfW5r0C1pq8qLhR8MTefZzOIkyxAZU+0hUdcmgOcTWt5cpcrgLM44ooT0on+jHy+Lo2mivRfVfog8qQ1MNh6yMaOcUHLMJyx18tudoVIzWNcaqN60gWxavCtB03lnbjaq0KY7n/1WZNIDTG5zcwsbwx1LAdYTfF4465vL+LdlHai3CH7Fr6TklXEZn1HiFcgdEZvdWmiBcEvL+JfKFsiGuctqUAvf+Evulpjf4O9Q5Jz7F+K4PxM0muQa5GiUY/cvhT29lt94axMVe0E7MPv4I57Cu6ec+cWbejgwFJ4Jw10TXAhFlfzKLwe44iuZT+1s8dlThZw3cDZtO0=
-  file: target/release/guessing_game_squared
+  files:
+    - target/release/guessing_game
+    - target/release/autoguess
   on:
     repo: GitSquared/guessing_game
     branch: master
