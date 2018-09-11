@@ -19,7 +19,7 @@
 
 
 <p align="center">
-<img alt="Screenshot" src="https://raw.githubusercontent.com/GitSquared/guessing_game/master/readme_src/screenshot_autoguess.png" />
+<img alt="Screenshot" src="https://raw.githubusercontent.com/GitSquared/guessing_game/master/readme_src/screenshot_guess.png" />
 <br/>
 <img alt="Autoguess demo" src="https://raw.githubusercontent.com/GitSquared/guessing_game/master/readme_src/autoguess.gif" />
 </p>
