@@ -2,6 +2,9 @@
 [![Build Status](https://travis-ci.org/GitSquared/guessing_game.svg?branch=master)](https://travis-ci.org/GitSquared/guessing_game) [![Build status](https://ci.appveyor.com/api/projects/status/1n4r8uyqar9nv6mn/branch/master?svg=true)](https://ci.appveyor.com/project/GitSquared/guessing-game/branch/master)
 
 
+### :tada: Now with autoguess!
+
+
 \> be me  
 \> 3 am in the morning  
 \> "i should learn a new language, been messin' around with javascript for >2 years now"  
@@ -16,7 +19,9 @@
 
 
 <p align="center">
-<img alt="Screenshot" src="https://raw.githubusercontent.com/GitSquared/guessing_game/master/readme_src/screenshot.png" />
+<img alt="Screenshot" src="https://raw.githubusercontent.com/GitSquared/guessing_game/master/readme_src/screenshot_autoguess.png" />
+<br/>
+<img alt="Autoguess demo" src="https://raw.githubusercontent.com/GitSquared/guessing_game/master/readme_src/autoguess.gif" />
 </p>
 
 ### Current version includes:
@@ -24,7 +29,7 @@
 * Try to guess a random number between 1 and 100!
 * Beautiful CLI with colors and inline-prompts
 * *emojis* :open_mouth:
-* 2 dependencies: `rand` and `colored`
+* "autoguess": Let the computer play by itself (with gigantic numbers, while you're at it.)
 
 ### Future versions will include:
 
